@@ -1,0 +1,80 @@
+
+  .toggle-switch {
+    position: relative;
+    width: 75px;
+    display: inline-block;
+    text-align: left;
+    margin: 20px;
+  }
+  .checkbox {
+    display: none;
+  }
+  .label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px black;
+}
+
+.label:before {
+  
+}
+  .inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    font-size: 20px;
+    color: white;
+  }
+  .inner:before,
+  .inner:after {
+    float: left;
+    width: 50%;
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  .inner:before {
+    content: "☾";
+    padding-left: 10px;
+    background-color: rgb(11, 57, 2);
+    scale: 1.2;
+    padding-left: 15px;
+  }
+  .inner:after {
+    content: "🔆";
+    padding-right: 10px;
+    background-color: rgb(0, 0, 0);
+    text-align: right;
+  }
+  .switch {
+    display: block;
+    width: 24px;
+    margin: 5px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 17px;
+  }
+  .checkbox:checked + .label .inner {
+    margin-left: 0;
+    margin-top: -1px;
+  }
+  .checkbox:checked + .label .switch {
+    right: 2px;
+  }
+  .checkbox:checked + .label {
+    border: 2px solid rgb(255, 255, 255);
+    height: 37px;
+  }

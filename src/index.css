@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --bodyColor: "#ffffff";
+}
+body {
+  background-color: var(--bodyColor);
+}
